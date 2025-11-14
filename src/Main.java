@@ -3,35 +3,38 @@
 public class Main {
     public static void main(String[] args) {
         int clientOS = 1;
-        switch (clientOS) {
-            case 0:
-                System.out.println("Установите версию приложения для iOS по ссылке");
-                break;
-            case 1:
-                System.out.println("Установите версию приложения для Android по ссылке");
-                break;
-        }
-        //задача 2
-        int clientDeviceYear = 2011;
-        if (clientOS == 0 && clientDeviceYear < 2015) {
-            System.out.println("Установите облегченную версию приложения для iOS по ссылке");
-        }
-        if (clientOS == 0 && clientDeviceYear >= 2015) {
+        if (clientOS == 0) {
             System.out.println("Установите версию приложения для iOS по ссылке");
         }
-        if (clientOS == 1 && clientDeviceYear < 2015) {
-            System.out.println("Установите облегченную версию приложения для Android по ссылке");
+        if (clientOS == 1) {
+            System.out.println("Установите версию приложения для Android по ссылке");
+        } else {
+            System.out.println("Такой операционной системы нет");
         }
-        if (clientOS == 1 && clientDeviceYear >= 2015) {
+
+        System.out.println("задача 2");
+        int clientDeviceYear = 2012;
+        if (clientOS == 0 && clientDeviceYear < 2015) {
+            System.out.println("Установите облегченную версию приложения для iOS по ссылке");
+        } else if (clientOS == 0 && clientDeviceYear >= 2015) {
+            System.out.println("Установите версию приложения для iOS по ссылке");
+        } else if (clientOS == 1 && clientDeviceYear < 2015) {
+            System.out.println("Установите облегченную версию приложения для Android по ссылке");
+        } else {
             System.out.println("Установите версию приложения для Android по ссылке");
         }
-        //задача 3
-        int year = 2021;
-        if ((year >= 1584 && year % 4 == 0 && year % 100 != 0) || year % 400 == 0) {
-            System.out.println(year + " Год является високосным");
+        System.out.println("задача 3");
+        int year = 2000;
+        if (year >= 1584) {
+            if ((year % 4 == 0 && year % 100 != 0) || year % 400 == 0) {
+                System.out.println(year + " Год является високосным");
+            } else {
+                System.out.println(year + " Год не является високосным");
+            }
         } else {
-            System.out.println(year + " Год не является високосным");
-        }//задача 4
+            System.out.println("Год должен быть больше чем 1584");
+        }
+        System.out.println("задача 4");
         int deliveryDistance = 60;
         int deliveryDays = 1;
         if (deliveryDistance < 20) {
@@ -47,7 +50,7 @@ public class Main {
         }
         System.out.println("Потребуется " + deliveryDays + " дней");
 
-        //задача 5
+        System.out.println("задача 5");
         int monthNumber = 19;
         switch (monthNumber) {
             case 1:
