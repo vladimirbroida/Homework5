@@ -24,15 +24,16 @@ public class Main {
             System.out.println("Установите версию приложения для Android по ссылке");
         }
         System.out.println("задача 3");
-        int year = 2000;
-        if (year >= 1584) {
-            if ((year % 4 == 0 && year % 100 != 0) || year % 400 == 0) {
+
+        int year = 400;
+        if (year < 1584) {
+            System.out.println("Год должен быть больше чем 1584");
+
+        } else if ((year % 4 == 0 && year % 100 != 0) || year % 400 == 0) {
                 System.out.println(year + " Год является високосным");
             } else {
                 System.out.println(year + " Год не является високосным");
-            }
-        } else {
-            System.out.println("Год должен быть больше чем 1584");
+
         }
         System.out.println("задача 4");
         int deliveryDistance = 60;
