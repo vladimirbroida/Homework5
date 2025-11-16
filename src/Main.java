@@ -25,7 +25,7 @@ public class Main {
         }
         System.out.println("задача 3");
 
-        int year = 400;
+        int year = 1400;
         if (year < 1584) {
             System.out.println("Год должен быть больше чем 1584");
 
